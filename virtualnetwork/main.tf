@@ -9,6 +9,7 @@ resource "azurerm_virtual_network" "vnet" {
   location            = data.azurerm_resource_group.rg.location
   resource_group_name = var.resource_group_name
   address_space       = each.value["address_space"]
+  tags                = data.azurerm_resource_group.rg.tags
 }
 
 
